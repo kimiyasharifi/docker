@@ -1,0 +1,60 @@
+Dec 13 05:48:49.449 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Dec 13 05:48:49.449 HYPERVISOR: Started on IP = localhost, TCP port = 40431.
+Dec 13 05:48:49.454 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 13 05:48:49.455 HYPERVISOR: exec_cmd: hypervisor working_dir /home/kimia/Desktop/gap/project-files/dynamips 
+Dec 13 05:48:49.455 GENERAL: working_dir=/home/kimia/Desktop/gap/project-files/dynamips
+Dec 13 05:48:49.455 HYPERVISOR: exec_cmd: hypervisor working_dir /home/kimia/Desktop/gap/project-files/dynamips/1ea8b69a-479c-4188-856b-8ac684fae63a 
+Dec 13 05:48:49.455 GENERAL: working_dir=/home/kimia/Desktop/gap/project-files/dynamips/1ea8b69a-479c-4188-856b-8ac684fae63a
+Dec 13 05:48:49.456 HYPERVISOR: exec_cmd: vm create ESW2 2 c3600 
+Dec 13 05:48:49.463 VM: VM ESW2 created.
+Dec 13 05:48:49.464 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW2 5002 
+Dec 13 05:48:49.464 HYPERVISOR: exec_cmd: c3600 get_mac_addr ESW2 
+Dec 13 05:48:49.464 HYPERVISOR: exec_cmd: vm set_disk0 ESW2 1 
+Dec 13 05:48:49.465 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 05:48:49.465 HYPERVISOR: exec_cmd: vm set_idle_pc ESW2 0x605d3700 
+Dec 13 05:48:49.472 HYPERVISOR: exec_cmd: vm set_ios ESW2 /home/kimia/GNS3/images/IOS/c3640-ik9o3s-mz124-13.image 
+Dec 13 05:48:49.473 HYPERVISOR: exec_cmd: c3600 set_mac_addr ESW2 cc02.1a6f.0000 
+Dec 13 05:48:49.473 HYPERVISOR: exec_cmd: vm set_nvram ESW2 256 
+Dec 13 05:48:49.474 HYPERVISOR: exec_cmd: vm set_ram ESW2 192 
+Dec 13 05:48:49.474 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 05:48:49.474 HYPERVISOR: exec_cmd: vm slot_add_binding ESW2 0 0 NM-16ESW 
+Dec 13 05:48:49.605 HYPERVISOR: exec_cmd: nio create_udp udp-6f08dd71-8396-433f-ba77-59f6171d419f 10002 127.0.0.1 10003 
+Dec 13 05:48:49.862 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 0 0 udp-6f08dd71-8396-433f-ba77-59f6171d419f 
+Dec 13 05:48:49.862 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 05:48:49.983 HYPERVISOR: exec_cmd: nio create_udp udp-d0b68570-b98b-48c2-ab5b-4954ac9368e7 10006 127.0.0.1 10007 
+Dec 13 05:48:49.985 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 0 1 udp-d0b68570-b98b-48c2-ab5b-4954ac9368e7 
+Dec 13 05:48:49.985 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 05:48:50.829 HYPERVISOR: exec_cmd: nio create_udp udp-150ece79-7d2c-412a-9e66-ff3145201a00 10018 127.0.0.1 10019 
+Dec 13 05:48:50.831 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW2 0 2 udp-150ece79-7d2c-412a-9e66-ff3145201a00 
+Dec 13 05:48:50.831 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 05:48:59.041 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+Dec 13 05:48:59.041 VM: VM Ghost created.
+Dec 13 05:48:59.395 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/kimia/GNS3/images/IOS/c3640-ik9o3s-mz124-13.image 
+Dec 13 05:48:59.398 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 13 05:48:59.399 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/kimia/Desktop/gap/project-files/dynamips/c3640-ik9o3s-mz124-13.image-192.ghost 
+Dec 13 05:48:59.399 HYPERVISOR: exec_cmd: vm set_ram Ghost 192 
+Dec 13 05:48:59.400 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 13 05:48:59.652 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Dec 13 05:48:59.652 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 13 05:49:14.815 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 13 05:49:14.817 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 13 05:49:14.957 VM: VM Ghost shutdown.
+Dec 13 05:49:14.958 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Dec 13 05:49:14.960 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 13 05:49:14.960 VM: VM Ghost destroyed.
+Dec 13 05:49:14.963 HYPERVISOR: exec_cmd: vm set_ghost_status ESW2 2 
+Dec 13 05:49:14.964 HYPERVISOR: exec_cmd: vm set_ghost_file ESW2 /home/kimia/Desktop/gap/project-files/dynamips/c3640-ik9o3s-mz124-13.image-192.ghost 
+Dec 13 05:49:14.965 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 05:49:14.967 HYPERVISOR: exec_cmd: vm set_config ESW2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Dec 13 05:49:14.967 HYPERVISOR: exec_cmd: vm start ESW2 
+Dec 13 06:01:30.839 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 06:01:30.840 HYPERVISOR: exec_cmd: vm stop ESW2 
+Dec 13 06:01:31.360 VM: VM ESW2 shutdown.
+Dec 13 06:01:31.773 HYPERVISOR: exec_cmd: vm extract_config ESW2 
+Dec 13 06:01:32.701 HYPERVISOR: exec_cmd: vm get_status ESW2 
+Dec 13 06:01:32.702 HYPERVISOR: exec_cmd: vm extract_config ESW2 
+Dec 13 06:01:32.705 HYPERVISOR: exec_cmd: vm delete ESW2 
+Dec 13 06:01:32.705 VM: VM ESW2 destroyed.
+Dec 13 06:01:32.707 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 13 06:01:32.830 HYPERVISOR: Stopped.
+Dec 13 06:01:32.830 GENERAL: reset done.

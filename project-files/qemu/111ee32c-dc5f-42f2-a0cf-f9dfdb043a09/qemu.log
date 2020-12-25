@@ -1,0 +1,4 @@
+Start QEMU with /bin/qemu-system-i386 -name server1 -m 64M -smp cpus=1,sockets=1 -enable-kvm -boot order=c -drive file=/home/kimia/Desktop/gap/project-files/qemu/111ee32c-dc5f-42f2-a0cf-f9dfdb043a09/hda_disk.qcow2,if=ide,index=0,media=disk,id=drive0 -uuid 111ee32c-dc5f-42f2-a0cf-f9dfdb043a09 -serial telnet:127.0.0.1:5001,server,nowait -monitor tcp:127.0.0.1:38831,server,nowait -net none -device e1000,mac=0c:ae:64:5f:48:00,netdev=gns3-0 -netdev socket,id=gns3-0,udp=127.0.0.1:10037,localaddr=127.0.0.1:10036 -display none
+
+Execution log:
+qemu-system-i386: terminating on signal 15 from pid 16672 (/usr/share/gns3/gns3-server/bin/python)
